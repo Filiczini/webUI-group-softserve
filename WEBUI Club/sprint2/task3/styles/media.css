@@ -1,74 +1,10 @@
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 950px;
-  }
-
-  .hero-img img {
-    max-width: 950px;
-  }
-
-  #fan-appeal-text {
-    width: 45em;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  .hero-img img {
-    max-width: 730px;
-  }
-
-  #fan-appeal-text {
-    width: 30em;
-  }
-
-  .bio .container .biography {
-    flex-direction: column;
-  }
-
-  .last-win-content {
-    flex-direction: column-reverse;
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .container {
-    max-width: 530px;
-  }
-
-  .hero-img img {
-    max-width: 530px;
-  }
-
-  #fan-appeal-text {
-    width: 20em;
-  }
-
-  .bio .container .biography {
-    flex-direction: column;
-  }
-
-  .last-win-content {
-    flex-direction: column-reverse;
-  }
-}
-
+/* Small devices (landscape phones, 320px and up) */
 @media (min-width: 320px) {
   header .container {
     justify-content: flex-end;
   }
 
   .container {
-    max-width: 300px;
-  }
-
-  .hero-img img {
     max-width: 300px;
   }
 
@@ -85,7 +21,8 @@
   }
 
   .biography .info-img img,
-  .last-win-img img {
+  .last-win-img img,
+  .hero-img img {
     max-width: 300px;
   }
 
@@ -103,5 +40,103 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 530px;
+  }
+
+  .biography .info-img img,
+  .last-win-img img,
+  .hero-img img {
+    max-width: 530px;
+  }
+
+  #fan-appeal-text {
+    width: 20em;
+  }
+
+  .bio .container .biography {
+    flex-direction: column;
+  }
+
+  .last-win-content {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .fixed-menu nav {
+    display: flex;
+  }
+  .container {
+    max-width: 730px;
+  }
+
+  #fan-appeal-text {
+    width: 30em;
+  }
+
+  .bio .container .biography {
+    flex-direction: column;
+  }
+
+  .last-win-content {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  header .container {
+    justify-content: space-between;
+  }
+  .container {
+    max-width: 950px;
+  }
+  .hero-img img {
+    min-width: 100%;
+  }
+  .biography .info-img img,
+  .last-win-img img {
+    max-width: 475px;
+  }
+
+  #fan-appeal-text {
+    width: 45em;
+  }
+
+  .bio .container .biography {
+    flex-direction: row;
+  }
+
+  .last-win-content {
+    flex-direction: row;
+  }
+  .gap-20 {
+    padding: 20px;
+  }
+
+  .appeal-form,
+  .appeal-form form,
+  footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1100px;
+  }
+  .biography .info-img img,
+  .last-win-img img {
+    max-width: 550px;
   }
 }
