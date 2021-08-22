@@ -23,7 +23,7 @@
   .biography .info-img img,
   .last-win-img img,
   .hero-img img {
-    max-width: 300px;
+    max-width: 100%;
   }
 
   .fixed-menu nav {
@@ -49,12 +49,6 @@
     max-width: 530px;
   }
 
-  .biography .info-img img,
-  .last-win-img img,
-  .hero-img img {
-    max-width: 530px;
-  }
-
   #fan-appeal-text {
     width: 20em;
   }
@@ -70,6 +64,9 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  header .container {
+    justify-content: space-between;
+  }
   .fixed-menu nav {
     display: flex;
   }
@@ -92,9 +89,6 @@
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  header .container {
-    justify-content: space-between;
-  }
   .container {
     max-width: 950px;
   }
