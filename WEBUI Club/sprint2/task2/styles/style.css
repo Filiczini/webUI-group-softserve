@@ -1,0 +1,306 @@
+/* refreshing styles, vars, fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --main-color: #151521;
+  --secondary-color: #d2003c;
+  --main-gradient: linear-gradient(
+      270deg,
+      #191e2b 0,
+      #333b54 52.08%,
+      #141822 100%
+    ),
+    #191e2b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background: var(--main-color);
+}
+
+/* Common styles section */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+.gap-20 {
+  padding: 20px;
+}
+
+/* Header section */
+
+header {
+  position: relative;
+  min-height: 90px;
+}
+
+.fixed-menu {
+  background: var(--main-gradient);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 0px 10px;
+}
+
+header ul a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  padding-bottom: 3px;
+}
+
+header ul a:hover,
+.current-page {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+header .dropdown-menu {
+  position: absolute;
+  background: var(--main-color);
+  opacity: 0.7;
+  min-width: 150px;
+  display: none;
+}
+
+.dropdown-menu-item {
+  position: relative;
+}
+
+header .dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu-item:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Main section */
+
+/*  Hero image */
+
+.hero-img img {
+  max-width: 1100px;
+}
+
+/* Biography section  */
+
+.last-win-img img {
+  max-width: 550px;
+}
+/* Last win section  */
+
+.biography .info-img img {
+  max-width: 550px;
+}
+/* Footer section */
+
+footer .container {
+  justify-content: space-between;
+}
+
+/* header {
+  position: relative;
+  background: #191e2b;
+  background-image: linear-gradient(
+      270deg,
+      rgb(25, 30, 43) 0px,
+      rgb(51, 59, 84) 52.08%,
+      rgb(20, 24, 34) 100%
+    ),
+    initial;
+  height: 100px;
+}
+
+header .container {
+  position: fixed;
+  left: 165px;
+  padding: 0px 20px;
+  width: 100%;
+  height: 100px;
+  background: #191e2b;
+  background-image: linear-gradient(
+      270deg,
+      rgb(25, 30, 43) 0px,
+      rgb(51, 59, 84) 52.08%,
+      rgb(20, 24, 34) 100%
+    ),
+    initial;
+  min-width: 100px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+}
+
+.container ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  padding: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline 2px solid #d2003c;
+  color: #d2003c;
+}
+
+header .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #191e2b;
+  background-image: linear-gradient(
+      270deg,
+      rgb(25, 30, 43) 0px,
+      rgb(51, 59, 84) 52.08%,
+      rgb(20, 24, 34) 100%
+    ),
+    initial;
+  min-width: 100px;
+}
+
+header .dropdown-menu-item {
+  width: 100%;
+}
+
+.dropdown-menu-item li {
+  padding: 10px 5px;
+}
+
+.dropdown-menu-item:hover .dropdown-menu {
+  display: block;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header img {
+  max-height: 80px;
+}
+
+header ul {
+  display: flex;
+}
+
+.hero-img .container {
+  justify-content: center;
+}
+
+article {
+  padding: 40px 0px;
+  margin: 20px 0px;
+}
+
+.info-img img {
+  max-width: 550px;
+}
+
+.last-win .container {
+  flex-direction: column;
+}
+
+.last-win-info {
+  flex-direction: row;
+  display: flex;
+  padding: 40px 0px;
+  align-items: center;
+}
+
+.last-win-info .img img {
+  max-width: 550px;
+}
+
+.last-win-info .info {
+  padding: 20px;
+}
+
+.bio .container {
+  flex-direction: column;
+}
+
+.bio .biography {
+  flex-direction: row;
+  display: flex;
+  padding: 40px 0px;
+}
+
+.info-img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+main {
+  overflow: auto;
+}
+
+footer,
+main {
+  background: #12151e;
+  background-image: radial-gradient(
+      313.01px at 51.23% 0px,
+      rgb(35, 41, 59) 0px,
+      rgb(15, 17, 26) 100%
+    ),
+    initial;
+}
+
+footer {
+  padding: 40px 0px;
+} */
