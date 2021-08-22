@@ -1,0 +1,107 @@
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .hero-img img {
+    max-width: 950px;
+  }
+
+  #fan-appeal-text {
+    width: 45em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .hero-img img {
+    max-width: 730px;
+  }
+
+  #fan-appeal-text {
+    width: 30em;
+  }
+
+  .bio .container .biography {
+    flex-direction: column;
+  }
+
+  .last-win-content {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 530px;
+  }
+
+  .hero-img img {
+    max-width: 530px;
+  }
+
+  #fan-appeal-text {
+    width: 20em;
+  }
+
+  .bio .container .biography {
+    flex-direction: column;
+  }
+
+  .last-win-content {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 320px) {
+  header .container {
+    justify-content: flex-end;
+  }
+
+  .container {
+    max-width: 300px;
+  }
+
+  .hero-img img {
+    max-width: 300px;
+  }
+
+  #fan-appeal-text {
+    width: 15em;
+  }
+
+  .bio .container .biography {
+    flex-direction: column;
+  }
+
+  .last-win-content {
+    flex-direction: column-reverse;
+  }
+
+  .biography .info-img img,
+  .last-win-img img {
+    max-width: 300px;
+  }
+
+  .fixed-menu nav {
+    display: none;
+  }
+
+  .gap-20 {
+    padding: 20px 0px;
+  }
+
+  .appeal-form,
+  .appeal-form form,
+  footer .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
