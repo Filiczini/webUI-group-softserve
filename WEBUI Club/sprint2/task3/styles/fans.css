@@ -1,0 +1,62 @@
+/* Appeal container */
+
+article,
+.fans-appeal footer,
+.appeal-container {
+  padding: 25px 0px;
+}
+
+/* Fans appeal container */
+
+.fans-appeal footer {
+  justify-content: space-between;
+}
+
+.fans-appeal footer a,
+.fans-appeal footer p {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.fans-appeal footer {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Form appeal */
+
+.appeal-container form {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.appeal-form,
+.appeal-form form {
+  min-width: 100%;
+}
+
+.appeal-form button {
+  padding: 10px 60px;
+  font-size: 18px;
+  background: var(--secondary-color);
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.appeal-form button:hover {
+  background: #d2003cd9;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.appeal-form textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.appeal-form textarea:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--secondary-color);
+}

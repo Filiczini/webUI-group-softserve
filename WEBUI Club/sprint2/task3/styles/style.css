@@ -1,0 +1,284 @@
+/* refreshing styles, vars, fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --main-color: #151521;
+  --secondary-color: #d2003c;
+  --main-gradient: linear-gradient(
+      270deg,
+      #191e2b 0,
+      #333b54 52.08%,
+      #141822 100%
+    ),
+    #191e2b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background: var(--main-color);
+}
+
+/* Common styles section */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-20 {
+  padding: 20px;
+}
+
+/* Common styles animated text */
+
+.text-animation {
+  position: relative;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 5s steps(44) infinite both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Header section */
+
+header {
+  position: relative;
+  min-height: 90px;
+}
+
+.fixed-menu {
+  background: var(--main-gradient);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 0px 10px;
+}
+
+header ul a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  padding-bottom: 3px;
+}
+
+header ul a:hover,
+.current-page {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+header .dropdown-menu {
+  position: absolute;
+  background: var(--main-color);
+  opacity: 0.7;
+  min-width: 150px;
+  display: none;
+}
+
+.dropdown-menu-item {
+  position: relative;
+}
+
+header .dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu-item:hover .dropdown-menu {
+  display: flex;
+}
+.dropdown-menu li {
+  transition: 0.3s;
+}
+.dropdown-menu li:hover {
+  transform: scale(1.1);
+}
+
+/* Header Logo Animation */
+
+/*Text Animation */
+
+.slideLeft {
+  padding-right: 10px;
+
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
+
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(1000%);
+  }
+  50% {
+    transform: translateX(-8%);
+  }
+  65% {
+    transform: translateX(4%);
+  }
+  80% {
+    transform: translateX(-4%);
+  }
+  95% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translateX(-8%);
+  }
+  65% {
+    -webkit-transform: translateX(4%);
+  }
+  80% {
+    -webkit-transform: translateX(-4%);
+  }
+  95% {
+    -webkit-transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+/* Logo animation */
+
+.animation-logo img {
+  animation-name: rotateLogo;
+  -webkit-animation-name: rotateLogo;
+
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  animation-delay: 1.29s;
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  65% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  95% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotateLogo {
+  0% {
+    -webkit-transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+/* Main section */
+
+/*  Hero image */
+
+.hero-img img {
+  max-width: 1100px;
+}
+
+/* Biography section  */
+
+.last-win-img img {
+  max-width: 550px;
+}
+/* Last win section  */
+
+.biography .info-img img {
+  max-width: 550px;
+}
+/* Footer section */
+
+footer .container {
+  justify-content: space-between;
+}
