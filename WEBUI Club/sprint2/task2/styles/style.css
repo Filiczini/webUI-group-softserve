@@ -1,6 +1,6 @@
 /* refreshing styles, vars, fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
   --main-color: #151521;
@@ -38,7 +38,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px;
 }
 
 .flex-col {
@@ -46,11 +45,40 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
 }
 
 .gap-20 {
   padding: 20px;
+}
+
+/* Common styles animated text */
+
+.dsongentom {
+  position: relative;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.desetungavon {
+  animation: typewriter 5s steps(44) infinite both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 /* Header section */
@@ -64,6 +92,7 @@ header {
   background: var(--main-gradient);
   position: fixed;
   width: 100%;
+  z-index: 2;
   border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -112,6 +141,123 @@ header .dropdown-menu li {
 
 .dropdown-menu-item:hover .dropdown-menu {
   display: flex;
+}
+.dropdown-menu li {
+  transition: 0.3s;
+}
+.dropdown-menu li:hover {
+  transform: scale(1.1);
+}
+
+/* Header Logo Animation */
+
+/*Text Animation */
+
+.slideLeft {
+  padding-right: 10px;
+
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
+
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(1000%);
+  }
+  50% {
+    transform: translateX(-8%);
+  }
+  65% {
+    transform: translateX(4%);
+  }
+  80% {
+    transform: translateX(-4%);
+  }
+  95% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translateX(-8%);
+  }
+  65% {
+    -webkit-transform: translateX(4%);
+  }
+  80% {
+    -webkit-transform: translateX(-4%);
+  }
+  95% {
+    -webkit-transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+/* Logo animation */
+
+.animation-logo img {
+  animation-name: rotateLogo;
+  -webkit-animation-name: rotateLogo;
+
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  animation-delay: 1.29s;
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  65% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  95% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotateLogo {
+  0% {
+    -webkit-transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
 }
 
 /* Main section */
