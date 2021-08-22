@@ -49,6 +49,10 @@ body {
   padding: 20px 0px;
 }
 
+.gap-20 {
+  padding: 20px;
+}
+
 /* Header section */
 
 header {
@@ -99,11 +103,19 @@ header ul a:hover {
 
 /* Biography section  */
 
+.last-win-img img {
+  max-width: 550px;
+}
+/* Last win section  */
+
 .biography .info-img img {
   max-width: 550px;
 }
-
 /* Footer section */
+
+footer .container {
+  justify-content: space-between;
+}
 
 /* header {
   position: relative;
