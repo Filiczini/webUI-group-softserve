@@ -1,5 +1,28 @@
 /* Small devices (landscape phones, 320px and up) */
 @media (min-width: 320px) {
+  .fixed-menu nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--main-color);
+    height: 100%;
+    width: 150px;
+    visibility: hidden;
+  }
+
+  .fixed-menu .ul-menu {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+  .fixed-menu .ul-menu li {
+    padding: 10px 0px;
+  }
+
+  .burger-label {
+    visibility: visible;
+  }
+
   header .container {
     justify-content: flex-end;
   }
@@ -26,10 +49,6 @@
     max-width: 100%;
   }
 
-  .fixed-menu nav {
-    display: none;
-  }
-
   .gap-20 {
     padding: 20px 0px;
   }
@@ -45,6 +64,9 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .burger-label {
+    visibility: visible;
+  }
   .container {
     max-width: 530px;
   }
@@ -64,6 +86,9 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .burger-label {
+    visibility: hidden;
+  }
   header .container {
     justify-content: space-between;
   }
@@ -133,4 +158,17 @@
   .last-win-img img {
     max-width: 550px;
   }
+}
+
+#menu_checkbox:checked .fixed-menu nav {
+  visibility: visible;
+}
+
+#menu_checkbox:checked + .fixed-menu nav {
+  visibility: visible;
+}
+
+#menu_checkbox:checked ~ .fixed-menu nav {
+  visibility: visible;
+  background: red;
 }

@@ -81,7 +81,78 @@ body {
 }
 
 /* Header section */
+/* Nav animation, hamburger */
+body {
+  -webkit-tap-highlight-color: transparent;
+}
 
+#menu_checkbox {
+  opacity: 0;
+}
+
+.burger-label {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  display: block;
+  width: 25px;
+  height: 60px;
+  margin: -30px auto 0 auto;
+  cursor: pointer;
+}
+
+.burger-label:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  transition: 1.2s cubic-bezier(0, 0.96, 1, 0.02) background-color;
+}
+
+.burger-label div {
+  position: relative;
+  top: 0;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 12px;
+  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+    0.3s ease right;
+  border-radius: 2px;
+}
+
+.burger-label div:first-child {
+  transform-origin: 0;
+}
+
+.burger-label div:last-child {
+  margin-bottom: 0;
+  transform-origin: 38px;
+}
+
+.burger-label div:nth-child(2) {
+  right: 0;
+  width: 25px;
+}
+
+#menu_checkbox:checked + .burger-label div:first-child {
+  top: -4px;
+  transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked + .burger-label div:last-child {
+  top: 6px;
+  transform: rotateZ(45deg);
+}
+
+#menu_checkbox:checked + .burger-label div:nth-child(2) {
+  width: 43px;
+  top: -3px;
+  right: 10px;
+  transform: rotateZ(-45deg);
+}
+
+/* Header Styles */
 header {
   position: relative;
   min-height: 90px;
