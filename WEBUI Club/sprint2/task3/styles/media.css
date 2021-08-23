@@ -1,6 +1,6 @@
 /* Small devices (landscape phones, 320px and up) */
 @media (min-width: 320px) {
-  .fixed-menu nav {
+  nav {
     display: block;
     position: fixed;
     left: 0;
@@ -9,6 +9,10 @@
     height: 100%;
     width: 150px;
     visibility: hidden;
+  }
+
+  #menu_checkbox:checked ~ nav {
+    visibility: visible;
   }
 
   .fixed-menu .ul-menu {
@@ -86,6 +90,26 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .fixed-menu nav {
+    visibility: visible;
+    position: relative;
+    left: none;
+    width: auto;
+    background: none;
+  }
+  .fixed-menu .ul-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background: none;
+  }
+  .fixed-menu .ul-menu li {
+    padding: 10px;
+  }
+  #menu_checkbox {
+    display: none;
+  }
+
   .burger-label {
     visibility: hidden;
   }
@@ -158,17 +182,4 @@
   .last-win-img img {
     max-width: 550px;
   }
-}
-
-#menu_checkbox:checked .fixed-menu nav {
-  visibility: visible;
-}
-
-#menu_checkbox:checked + .fixed-menu nav {
-  visibility: visible;
-}
-
-#menu_checkbox:checked ~ .fixed-menu nav {
-  visibility: visible;
-  background: red;
 }

@@ -17,9 +17,15 @@
     <header>
         <div class="fixed-menu">
             <div class="container flex-row">
+                <input type="checkbox" id="menu_checkbox">
+                <label class="burger-label" for="menu_checkbox">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
                 <nav>
-                    <ul class="flex-row">
-                        <li><a href="index.html">Main</a></li>
+                    <ul class="flex-row ul-menu">
+                        <li><a class="current-page" href="index.html">Main</a></li>
                         <li class="dropdown-menu-item"><a href="#">Matches</a>
                             <ul class="dropdown-menu flex-col">
                                 <li><a href="#">The int10</a> </li>
@@ -28,7 +34,7 @@
                             </ul>
                         </li>
                         <li><a href="#">News</a></li>
-                        <li><a class="current-page" href="fans.html">Fans</a></li>
+                        <li><a href="fans.html">Fans</a></li>
                         <li><a href="#">Contact</a>
                         </li>
                         <li><a href="#">Admin</a></li>
