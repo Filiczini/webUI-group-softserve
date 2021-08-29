@@ -1,6 +1,9 @@
+// define button
 const button = document.querySelector(".appeal-button");
+// define container with appeals
 const container = document.getElementsByClassName("appeals");
 
+// define function that
 const addApeal = function (text) {
   let article = document.createElement("article");
   article.setAttribute("class", "fans-appeal");

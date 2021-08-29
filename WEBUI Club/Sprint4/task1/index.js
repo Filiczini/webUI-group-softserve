@@ -1,10 +1,16 @@
-// task 1
+// 1st way
 
-// let list = document.querySelector("ul");
-// let items = document.querySelectorAll("li");
+const ul = document.getElementById("list");
+let string = "";
 
-// list.prepand(list.children.item(4));
+ul.insertBefore(ul.children[4], ul.children[1]);
+ul.insertBefore(ul.children[4], ul.children[3]);
 
-// for (let i = 0; i < list.children.length - 1; i++) {
-//   list.children[i].textContent += ",";
-// }
+for (let i = 0; i < ul.children.length; i++) {
+  ul.children[i].textContent += ", ";
+  string += ul.children[i].textContent;
+}
+
+console.log(string.slice(0, string.length - 2));
+
+// 2nd way
