@@ -5,6 +5,9 @@ let tellMeWhy = function (string) {
   let li = document.createElement("li");
   li.textContent = string;
   ul.appendChild(li);
+  if (ul.children.length >= 20) {
+    ul.innerHTML = "";
+  }
 };
 
 button.addEventListener("click", () => tellMeWhy("I was pressed"));
