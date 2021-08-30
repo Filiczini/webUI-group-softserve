@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+
 main {
   background-color: #f4f4f4;
   height: 100vh;

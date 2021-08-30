@@ -1,15 +1,25 @@
 let button = document.getElementById("button");
 let ul = document.querySelector("ul");
 
-let tellMeWhy = function (string) {
+let tellMeWhy = function (string, e) {
   let li = document.createElement("li");
   li.textContent = string;
+  if (e.type == "mouseenter") {
+    li.setAttribute("class", "green");
+  } else if (e.type == "mouseleave") {
+    li.setAttribute("class", "red");
+  } else if (e.type == "click") {
+    li.setAttribute("class", "blue");
+  }
   ul.appendChild(li);
+
   if (ul.children.length >= 20) {
-    ul.innerHTML = "";
+    ul.removeChild(ul.firstChild);
   }
 };
 
-button.addEventListener("click", () => tellMeWhy("I was pressed"));
-button.addEventListener("mouseenter", () => tellMeWhy("Mouse on me"));
-button.addEventListener("mouseleave", () => tellMeWhy("Mouse is not on me"));
+button.addEventListener("click", (e) => tellMeWhy("I was pressed", e));
+button.addEventListener("mouseenter", (e) => tellMeWhy("Mouse on me", e));
+button.addEventListener("mouseleave", (e) =>
+  tellMeWhy("Mouse is not on me", e)
+);
