@@ -1,8 +1,8 @@
 // define all variables. All html tags to work
-let h1 = document.querySelector("h1");
-let myDiv = document.querySelector("#myDiv");
-let myList = document.getElementById("myList");
-let span = document.getElementsByTagName("span");
+const h1 = document.querySelector("h1");
+const myDiv = document.querySelector("#myDiv");
+const myList = document.getElementById("myList");
+const span = document.getElementsByTagName("span");
 
 // Change h1 backgound color
 h1.style.backgroundColor = "#82ef7d";

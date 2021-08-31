@@ -4,13 +4,13 @@ let ul = document.querySelector("ul");
 let tellMeWhy = function (string, e) {
   let li = document.createElement("li");
   li.textContent = string;
-  if (e.type == "mouseenter") {
-    li.setAttribute("class", "green");
-  } else if (e.type == "mouseleave") {
-    li.setAttribute("class", "red");
-  } else if (e.type == "click") {
-    li.setAttribute("class", "blue");
-  }
+
+  e.type == "mouseenter"
+    ? li.classList.add("green")
+    : e.type == "mouseleave"
+    ? li.classList.add("red")
+    : li.classList.add("blue");
+
   ul.appendChild(li);
 
   if (ul.children.length >= 20) {
