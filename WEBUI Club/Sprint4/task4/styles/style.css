@@ -232,7 +232,7 @@ header .dropdown-menu li {
   -webkit-animation-duration: 4s;
 
   animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: linear;
 }
 
 @keyframes slideLeft {
@@ -258,7 +258,7 @@ header .dropdown-menu li {
 
 @-webkit-keyframes slideLeft {
   0% {
-    -webkit-transform: translateX(150%);
+    -webkit-transform: translateX(1000%);
   }
   50% {
     -webkit-transform: translateX(-8%);
