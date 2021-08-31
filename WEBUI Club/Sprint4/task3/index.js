@@ -1,35 +1,41 @@
 // defining button and unordered list variables
-let button = document.getElementById("button");
-let ul = document.querySelector("ul");
+const button = document.getElementById("button");
+const trackingElement = function (elementId) {
+  const ul = document.querySelector("ul");
+  // check the length of ul, if greater then 20, remove first child.
+  const cleanUpOldLogs = function () {
+    if (ul.children.length >= 20) {
+      ul.removeChild(ul.firstChild);
+    }
+  };
 
-// check the length of ul, if greater then 20, remove first child.
-let length = function () {
-  if (ul.children.length >= 20) {
-    ul.removeChild(ul.firstChild);
-  }
+  // function accept string and event from eventListener
+  const tellMeWhy = function (string, e) {
+    const MOUSEENTERCLASS = "green";
+    const MOUSELEAVECLASS = "red";
+    const MOUSECLICKCLASS = "blue";
+    // creating li element
+    const li = document.createElement("li");
+    // add text from arguments to a li element
+    li.textContent = string;
+    // check event and add a class
+    e.type === "mouseenter"
+      ? li.classList.add(MOUSEENTERCLASS)
+      : e.type === "mouseleave"
+      ? li.classList.add(MOUSELEAVECLASS)
+      : li.classList.add(MOUSECLICKCLASS);
+    // adding li to the end of list
+    ul.appendChild(li);
+    // execute cleanup func to delete 1st element of list
+    cleanUpOldLogs();
+  };
+
+  // define button event listeners and invoke tellMeWhy func
+  elementId.addEventListener("click", (e) => tellMeWhy("I was pressed", e));
+  elementId.addEventListener("mouseenter", (e) => tellMeWhy("Mouse on me", e));
+  elementId.addEventListener("mouseleave", (e) =>
+    tellMeWhy("Mouse is not on me", e)
+  );
 };
 
-// function accept string and event from eventListener
-let tellMeWhy = function (string, e) {
-  // creating li element
-  let li = document.createElement("li");
-  // add text from arguments to a li element
-  li.textContent = string;
-  // check event and add a class
-  e.type == "mouseenter"
-    ? li.classList.add("green")
-    : e.type == "mouseleave"
-    ? li.classList.add("red")
-    : li.classList.add("blue");
-  // adding li to the end of list
-  ul.appendChild(li);
-  // invoke length function
-  length();
-};
-
-// define button event listeners and invoke tellMeWhy func
-button.addEventListener("click", (e) => tellMeWhy("I was pressed", e));
-button.addEventListener("mouseenter", (e) => tellMeWhy("Mouse on me", e));
-button.addEventListener("mouseleave", (e) =>
-  tellMeWhy("Mouse is not on me", e)
-);
+trackingElement(button);
