@@ -14,12 +14,12 @@ class Worker {
 
   showSalary() {
     let showSalary = this.dayRate * this.workingDays;
-    console.log(this.fullName + " salary: " + showSalary);
+    console.log(`${this.fullName} salary: ${showSalary}`);
     return showSalary;
   }
   showSalaryWithExperience() {
     let salaryExp = this.dayRate * this.workingDays * this.#experiance;
-    console.log(this.fullName + " salary: " + salaryExp);
+    console.log(`${this.fullName} salary: ${salaryExp}`);
     return salaryExp;
   }
 }
