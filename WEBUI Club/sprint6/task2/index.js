@@ -12,7 +12,7 @@ class Student extends Person {
     super(name, surname), (this.year = year);
   }
   showFullName(midleName) {
-    return this.name + " " + this.surname + " " + midleName;
+    return `${this.name}  ${this.surname} ${midleName}`;
   }
   showCourse(year) {
     let course = new Date().getFullYear() - this.year;
