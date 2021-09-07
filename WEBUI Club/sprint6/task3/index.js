@@ -27,28 +27,28 @@ class Worker {
 const worker1 = new Worker("John Johnson", 20, 23);
 console.log(worker1.fullName);
 worker1.showSalary();
-console.log("New experience: " + worker1.showExp);
+console.log(`New experience: ${worker1.showExp}`);
 worker1.showSalaryWithExperience();
 worker1.setExp = 1.5;
-console.log("New experience: " + worker1.showExp);
+console.log(`New experience: ${worker1.showExp}`);
 worker1.showSalaryWithExperience();
 
 const worker2 = new Worker("Tom Tomson", 48, 22);
 console.log(worker2.fullName);
 worker2.showSalary();
-console.log("New experience: " + worker2.showExp);
+console.log(`New experience: ${worker2.showExp}`);
 worker2.showSalaryWithExperience();
 worker2.setExp = 1.5;
-console.log("New experience: " + worker2.showExp);
+console.log(`New experience: ${worker2.showExp}`);
 worker2.showSalaryWithExperience();
 
 const worker3 = new Worker("Andy Ander", 29, 23);
 console.log(worker3.fullName);
 worker3.showSalary();
-console.log("New experience: " + worker3.showExp);
+console.log(`New experience: ${worker3.showExp}`);
 worker3.showSalaryWithExperience();
 worker3.setExp = 1.5;
-console.log("New experience: " + worker3.showExp);
+console.log(`New experience: ${worker3.showExp}`);
 worker3.showSalaryWithExperience();
 
 let JohnJohnson = worker1.showSalaryWithExperience();
