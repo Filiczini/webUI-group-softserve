@@ -3,7 +3,7 @@ class Person {
     (this.name = name), (this.surname = surname);
   }
   showFullName() {
-    return this.name + " " + this.surname;
+    return `${this.name} ${this.surname}`;
   }
 }
 
