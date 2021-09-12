@@ -55,15 +55,10 @@ let JohnJohnson = worker1.showSalaryWithExperience();
 let AndyAnder = worker2.showSalaryWithExperience();
 let TomTomson = worker3.showSalaryWithExperience();
 
-function filter() {
-  let newArr = [];
-  newArr.push(JohnJohnson, AndyAnder, TomTomson);
-  newArr.sort(function (a, b) {
+function filter(...workers) {
+  workers.sort(function (a, b) {
     return a - b;
   });
-  console.log(`Sorted salary:
-    John Johnson: ${newArr[0]}
-    Andy Ander: ${newArr[1]}
-    Tom Tomson: ${newArr[2]}`);
+  for (let i = 0; i < workers.length; i++) console.log(`${workers[i]}`);
 }
-filter();
+filter(JohnJohnson, AndyAnder, TomTomson);
