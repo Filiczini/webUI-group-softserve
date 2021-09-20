@@ -14,13 +14,14 @@ const findMersenne = function (n) {
   let resultArr = [];
   for (let i = 1; i <= numPower(n); i++) {
     let Mn = 2 ** i - 1;
-    if (Mn < n) {
+    if (Mn <= n) {
       resultArr.push(Mn);
     }
   }
-  console.log(resultArr);
   return resultArr;
 };
 
-findMersenne(200000);
-numPower(-2);
+module.exports = { numPower, findMersenne };
+
+// findMersenne(200000);
+// numPower(-2);

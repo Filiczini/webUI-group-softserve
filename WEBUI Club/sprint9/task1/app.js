@@ -3,7 +3,7 @@ let sumFinder = function (m, n) {
   let res = str.reduce(function (prev, current) {
     return parseInt(prev) + parseInt(current);
   });
-  console.log(res);
+  return res;
 };
 
-sumFinder(3, 2998);
+module.exports = sumFinder;
