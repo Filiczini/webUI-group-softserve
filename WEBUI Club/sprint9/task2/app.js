@@ -22,4 +22,4 @@ const findMersenne = function (n) {
 
 module.exports = findMersenne;
 
-findMersenne(1000000);
+// findMersenne(1000000);
