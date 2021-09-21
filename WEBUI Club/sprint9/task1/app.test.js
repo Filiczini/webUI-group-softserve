@@ -8,4 +8,8 @@ describe("sumFinder", () => {
   test("Takes 3 last nums of 2111. Expect 1 + 1 + 1 = 3", () => {
     expect(sumFinder(3, 2111)).toBe(3);
   });
+
+  test("Takes 2 last nums of 22. Expect 2 + 2 = 4", () => {
+    expect(sumFinder(2, 22)).toBe(4);
+  });
 });
