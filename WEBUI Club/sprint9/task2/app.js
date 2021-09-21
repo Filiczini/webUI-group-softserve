@@ -15,7 +15,6 @@ const findMersenne = function (n) {
       resultArr.push(Mn);
     }
   } while (Mn < n);
-  console.log(resultArr);
   return resultArr;
 };
 
