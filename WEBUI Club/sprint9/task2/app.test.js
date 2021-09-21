@@ -17,13 +17,13 @@ describe("findMersenne", () => {
     expect(findMersenne(100).length).toBe(3);
   });
 
-  test("findMersenne(10000000) Expect to return Mersenne numbers 3, 7, 31, 127, 2047, 8191, 131071, 524287, 8388607", () => {
+  test("findMersenne(10000000) Expect to return Mersenne numbers 3, 7, 31, 127, 8191, 131071, 524287", () => {
     expect(findMersenne(10000000)).toEqual([
-      3, 7, 31, 127, 2047, 8191, 131071, 524287, 8388607,
+      3, 7, 31, 127, 8191, 131071, 524287,
     ]);
   });
 
-  test("Expect to return Mersenne numbersfindMersenne(1000) Expect to return 4 numbers : 3, 7, 31, 127, 2047, 8191, 131071, 524287, 8388607", () => {
-    expect(findMersenne(10000000).length).toBe(9);
+  test("Expect to return Mersenne numbersfindMersenne(1000) Expect to return 4 numbers : 3, 7, 31, 127, 8191, 131071, 524287", () => {
+    expect(findMersenne(10000000).length).toBe(7);
   });
 });
