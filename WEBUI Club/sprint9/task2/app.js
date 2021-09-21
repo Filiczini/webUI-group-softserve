@@ -1,17 +1,24 @@
 const findMersenne = function (n) {
   let resultArr = [];
-  i = 0;
+  i = 1;
   let Mn = 2 ** i - 1;
+
+  function isPrime(num) {
+    for (var i = 2; i < num; i++) if (num % i === 0) return false;
+    return true;
+  }
+
   do {
     i++;
     Mn = 2 ** i - 1;
-    if (Mn <= n) {
+    if (Mn <= n && isPrime(i)) {
       resultArr.push(Mn);
     }
   } while (Mn < n);
+  console.log(resultArr);
   return resultArr;
 };
 
 module.exports = findMersenne;
 
-// findMersenne(2000000);
+findMersenne(1000000);
